@@ -172,7 +172,7 @@ async function updateBirds() {
         birdBox.querySelector(".order").textContent = bird.order;
         birdBox.querySelector(".status").textContent = bird.status;
         birdBox.querySelector(".length").textContent = (bird.size.length.value + bird.size.length.units);
-        birdBox.querySelector(".weight").textContent = (bird.size.weight.value + bird.size.length.units);
+        birdBox.querySelector(".weight").textContent = (bird.size.weight.value + bird.size.weight.units);
         container.appendChild(birdBox);
     }
     console.log("test line 159");
