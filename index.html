@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds of Aotearoa</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <script defer src="birddata.js" ></script>
+</head>
+<body id="body">
+    <header>
+        <h1 id="title">Birds of Aotearoa</h1>
+    </header>
+    <main>
+
+    <div class="searchbar">
+        <p id="filter_heading">Filter Birds</p>
+        <p id="search_heading">Search</p>
+        <input id="search_box" type="text" placeholder="Bird's name here..">
+        <label id="conservation_title" for="conservation-status">Filter by conservation status:</label>
+        <select class="dropdown" name="conservation-status" id="conservation-status">
+            <option value="No Filter">No Filter</option>
+            <option value="Not Threatened">Not Threatened</option>
+            <option value="Naturally Uncommon">Naturally Uncommon</option>
+            <option value="Relict">Relict</option>
+            <option value="Recovering">Recovering</option>
+            <option value="Declining">Declining</option>
+            <option value="Nationally Increasing">Nationally Increasing</option>
+            <option value="Nationally Vulnerable">Nationally Vulnerable</option>
+            <option value="Nationally Endangered">Nationally Endangered</option>
+            <option value="Nationally Critical">Nationally Critical</option>
+            <option value="Data Deficient">Data Deficient</option>
+        </select>
+        <label id="sort_heading" for="sort-style">Sort by feature (low to high):</label>
+        <select class="dropdown" name="sort-style" id="sort-style">
+            <option value="Unsorted">Unsorted</option>
+            <option value="weight">Weight (g)</option>
+            <option value="length">Length (cm)</option>
+        </select>
+        <button id="search_button" type="button">Apply</button>
+        <hr id="apply_line">
+        <div id="conservation_box">
+            <div id="conservation_heading">Conservation Status</div>
+            <div class="status_colors">
+                <p id="not_threatened"></p>
+                <p id="naturally_uncommon"></p>
+                <p id="relict"></p>
+                <p id="recovering"></p>
+                <p id="declining"></p>
+                <p id="nationally_increasing"></p>
+                <p id="nationally_vulnerable"></p>
+                <p id="nationally_endangered"></p>
+                <p id="nationally_critical"></p>
+                <p id="extinct"></p>
+                <p id="data_deficient"></p>
+            </div>
+            <div class="conservation_status">
+                <p>Not Threatened</p>
+                <p>Naturally Uncommon</p>
+                <p>Relict</p>
+                <p>Recovering</p>
+                <p>Declining</p>
+                <p>Nationally Increasing</p>
+                <p>Nationally Vulnerable</p>
+                <p>Nationally Endangered</p>
+                <p>Nationally Critical</p>
+                <p>Extinct</p>
+                <p>Data Deficient</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main" id="main">
+
+    </div>
+        
+    <template id="template">
+        <div class="birdbox">
+            <div class="primary_name"></div>
+            <div class="credit"></div>
+            <figure class="birdpic">
+                <img class="src"/>
+                <figcaption class="english_name"></figcaption>
+            </figure>
+            <div class="headings">
+                <p>Scientific name</p>
+                <p>Family</p>
+                <p>Order</p>
+                <p class="status_heading">Status</p>
+                <p>Length</p>
+                <p>Weight</p>
+            </div>
+            <div class="birdtext">
+                <p class="sci_name"></p>
+                <p class="family"></p>
+                <p class="order"></p>
+                <p class="status"></p>
+                <p class="length"></p>
+                <p class="weight"></p>
+            </div>
+            
+        </div>
+
+    </template>
+    </main>
+    <footer>
+        <p>Data licensed from <a href="https://www.birdsnz.org.nz/">Birds New Zealand</a> for educational use within the university.</p>
+        <p>Conservation status from <a href=https://www.doc.govt.nz/>DOC</a>.</p>
+    </footer>
+</body>
+</html>
